@@ -46,4 +46,5 @@ cd word-cloud-generator </code>
 We welcome contributions to improve the Word Cloud Generator! Please feel free to submit issues for bug reports, feature requests, or general feedback. If you'd like to contribute code, please fork the repository, make your changes, and submit a pull request.
 
 **Licence**
+
 This project is licensed under the GNU General Public License (GPL) v3.0 License. See the LICENSE file for more information.
