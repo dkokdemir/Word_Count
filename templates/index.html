@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Qualitative Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Qualitative Analysis Program by eXSPLab </h1>
+        <p align="center">Last edited: 02 April, 2023 - coded by dkokdemir</p><br>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <br>
+            <label for="omit_words">Omit words (separated by commas):</label>
+            <input type="text" name="omit_words" id="omit_words" placeholder="e.g., word1, word2, word3">
+            <br>
+            <label for="word_mappings">Word mappings (separated by commas):</label>
+            <input type="text" name="word_mappings" id="word_mappings" placeholder="e.g., bird=birds, soft=softer">
+            <br>
+            <label for="count_numbers">Do you want to count numbers in the text?</label>
+            <input type="checkbox" name="count_numbers" id="count_numbers">
+            <br>
+            <input type="submit" value="Upload and Analyze">
+        </form>
+        {% if img_path %}
+        <h2>Word Cloud:</h2>
+        <img src="{{ img_path }}" alt="Word Cloud">
+        <h2> Word Frequencies:</h2>
+        <p>Total words: {{ total_words }}</p>
+        <p><a href="{{ csv_path }}" download>Download Word Frequencies CSV</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
