@@ -17,6 +17,8 @@ pip (Python package installer)
 
 **Steps**
 
+<code>pip install -r requirements.txt</code> for required libraries summarized in requirements.txt
+
 1. Clone this repository:
 <code> git clone https://github.com/yourusername/word-cloud-generator.git
 cd word-cloud-generator </code>
