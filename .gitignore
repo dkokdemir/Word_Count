@@ -1,0 +1,17 @@
+# .gitignore
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python virtual environments
+*.venv
+venv/
+ENV/
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# Site-packages
+site-packages/

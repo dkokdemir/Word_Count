@@ -3,13 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Qualitative Analysis</title>
+    <title>Word Cloud Application - eXSPLab </title>
+    <meta name="keywords" content="science,methodology,qualitative analysis,word count, word cloud,word frequencies,python">
+    <meta name="description" content="Word Cloud Generator allows users to upload text files and generate word clouds based on the text content. The application is built using Flask, a lightweight Python web framework, and leverages the WordCloud and NLTK libraries for text processing and visualization.">
+    <meta name="author" content="Dogan Kokdemir (dogan AT kokdemir.info)">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Qualitative Analysis Program by eXSPLab </h1>
-        <p align="center">Last edited: 02 April, 2023 - coded by dkokdemir</p><br>
+        <hr color=#128FC8><br>
+        <h1>Word Cloud Application by eXSPLab </h1>
+        <p align="center">V.2.1 | Last edited: 02 April, 2023 | by dkokdemir</p><br>
+        <hr color=#128FC8><br><br>
         <form method="POST" enctype="multipart/form-data">
             <input type="file" name="file">
             <br>
@@ -19,7 +24,7 @@
             <label for="word_mappings">Word mappings (separated by commas):</label>
             <input type="text" name="word_mappings" id="word_mappings" placeholder="e.g., bird=birds, soft=softer">
             <br>
-            <label for="count_numbers">Do you want to count numbers in the text?</label>
+            <label for="count_numbers">Do you want to include numbers in the cloud?</label>
             <input type="checkbox" name="count_numbers" id="count_numbers">
             <br>
             <input type="submit" value="Upload and Analyze">
