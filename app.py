@@ -21,7 +21,7 @@ ALLOWED_EXTENSIONS = {'txt', 'rtf', 'doc', 'docx', 'pdf'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 20 * 1024 * 1024  # 20 MB file size limit
-app.secret_key = 'trust_me'
+app.secret_key = os.urandom(24)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
